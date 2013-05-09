@@ -1,0 +1,10 @@
+<h1>Restaurant reviews</h1>
+
+<% for review in @reviews %>
+       <%= link_to review.title, review %>  submitted by <%= review.poster %><br />
+       <%= review.date %><br />
+       <%= review.article %><br /><br />
+    <% end %>
+
+<%= link_to 'New Review', new_review_path %><br /><br />
+<%= link_to 'RSS Feed', "reviews.rss"%>
