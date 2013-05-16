@@ -1,0 +1,9 @@
+<p>
+    <% news = News.order('date desc').limit(2) %>
+    <% for item in news %>
+      <b><%= item.title %></b><br />
+      <%= item.date %><br />
+      <%= item.article %><br /><br />
+      <p style="border-bottom: 1px solid gray"></p>
+    <% end %>
+    </p>

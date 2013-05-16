@@ -1,5 +1,15 @@
 Restaurant::Application.routes.draw do
-  resources :reviews
+  root :to => "reviews#index"
+  resources :reviews do
+    collection do
+      get 'login'
+      get 'register'
+      post 'newuser'
+      post 'validate'
+      post 'search'
+      post 'comment'
+    end
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
